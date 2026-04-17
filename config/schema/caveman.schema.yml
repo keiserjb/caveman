@@ -1,0 +1,15 @@
+caveman.settings:
+  type: config_object
+  label: 'Caveman settings'
+  mapping:
+    caveman_override:
+      type: boolean
+      label: 'Enable caveman filter site-wide'
+
+filter_settings.caveman:
+  type: mapping
+  label: 'Caveman filter settings'
+  mapping:
+    caveman_display_tip:
+      type: boolean
+      label: 'Display caveman filter tip'

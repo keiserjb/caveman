@@ -2,28 +2,36 @@
 
 simple filter. make words sound like caveman talk. fun. short. strong.
 
-you add filter to text place at admin → config → content → text formats.
+you add filter to text place at admin → config → content authoring → text formats.
+
+---
 
 ## install <!-- This section is required. -->
 
 ugh. you do this:
 
-- you put module in backdrop way. follow path:  
-  https://docs.backdropcms.org/documentation/extend-with-modules  
+- you run: composer require drupal/caveman
+- you go enable module:
+admin → extend  
+(/admin/modules)
 
-- you go text formats place:  
-  admin/config/content/formats  
+- you find caveman filter. you turn on.
 
-- you turn on caveman filter for text  
+- you go text formats place: admin/config/content/formats
 
-- you wait. good things come.  
+- you edit format (like filtered html)
 
-- wait until april fools
+- you turn on caveman filter
+
+- you save
+
+- you wait. good things come.
+
+- wait until april fools (or turn on override if you have one)
 
 ## problems <!-- This section is required. -->
 
-something break? you tell tribe here:  
-[the Issue Queue](https://github.com/backdrop-contrib/caveman/issues)
+something break? you tell tribe in issue queue. tribe see. tribe fix. UNGA.
 
 ## tribe leaders <!-- This section is required. -->
 
@@ -33,6 +41,8 @@ something break? you tell tribe here:
 ## thanks <!-- This section is required. -->
 
 this small module. act like pirate filter. but caveman. more unga.
+
+caveman also here for [backdropcms](https://backdropcms.org/project/caveman) tribe.
 
 ## law of land <!-- This section is required. -->
 

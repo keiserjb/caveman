@@ -1,0 +1,6 @@
+name: Caveman Filter
+description: 'Turn site to caveman-speak!'
+type: module
+package: 'Input filters'
+configure: caveman.admin_settings
+core_version_requirement: ^10 || ^11

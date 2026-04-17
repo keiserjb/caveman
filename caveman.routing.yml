@@ -1,0 +1,7 @@
+caveman.admin_settings:
+  path: '/admin/config/content/caveman'
+  defaults:
+    _form: '\Drupal\caveman\Form\CavemanSettingsForm'
+    _title: 'Caveman settings'
+  requirements:
+    _permission: 'administer filters'
