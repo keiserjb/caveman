@@ -3,24 +3,25 @@
 namespace Drupal\caveman\Plugin\Filter;
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\filter\Attribute\Filter;
 use Drupal\filter\FilterProcessResult;
 use Drupal\filter\Plugin\FilterBase;
+use Drupal\filter\Plugin\FilterInterface;
 
 /**
  * Provides a filter to change text into Caveman-speak.
- *
- * @Filter(
- *   id = "caveman",
- *   module = "caveman",
- *   title = @Translation("Caveman filter"),
- *   description = @Translation("Turn text into caveman speak. Short. Strong."),
- *   type = Drupal\filter\Plugin\FilterInterface::TYPE_TRANSFORM_REVERSIBLE,
- *   settings = {
- *     "caveman_display_tip" = 1,
- *   },
- *   weight = -10
- * )
  */
+#[Filter(
+  id: 'caveman',
+  title: new TranslatableMarkup('Caveman filter'),
+  type: FilterInterface::TYPE_TRANSFORM_REVERSIBLE,
+  description: new TranslatableMarkup('Turn text into caveman speak. Short. Strong.'),
+  weight: -10,
+  settings: [
+    'caveman_display_tip' => 1,
+  ],
+)]
 class Caveman extends FilterBase {
 
   /**
@@ -79,7 +80,7 @@ class Caveman extends FilterBase {
   /**
    * {@inheritdoc}
    */
-  public function tips($long = FALSE) {
+  public function tips() {
     if (!empty($this->settings['caveman_display_tip'])) {
       return $this->t('UGH. Caveman speak. Words short. Tribe understand.');
     }
